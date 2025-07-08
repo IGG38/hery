@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     2: typeof import('./components/UserInfo/test2 copy 2.vue')['default']
+    Card: typeof import('./components/Card.vue')['default']
     Carousel: typeof import('./components/Carousel.vue')['default']
     copy: typeof import('./components/UserInfo/DY copy.vue')['default']
     Countdown: typeof import('./components/Countdown.vue')['default']
@@ -19,9 +20,11 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     User: typeof import('./components/User.vue')['default']
+    UserCard: typeof import('./components/UserCard.vue')['default']
     WaterFall: typeof import('./components/Layout/WaterFall.vue')['default']
     Wb: typeof import('./components/UserInfo/wb.vue')['default']
     WB: typeof import('./components/UserInfo/WB.vue')['default']
+    Work: typeof import('./components/Work.vue')['default']
     XHS: typeof import('./components/UserInfo/XHS.vue')['default']
   }
 }

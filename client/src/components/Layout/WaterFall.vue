@@ -4,7 +4,7 @@
     <template #default="{ item, url, index }">
       <div class="card">
         <LazyImg :url="url" />
-        <p class="text">{{ item.title }}</p>
+        <!-- <p class="text">{{ item.title }}</p> -->
       </div>
     </template>
   </Waterfall>

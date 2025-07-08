@@ -7,15 +7,16 @@
         <Carousel />
       </NFlex>
       <div id="center">
-        <NButton @click="GO">go test</NButton>
-        <NButton @click="GO1">go test1</NButton>
-        <NButton @click="GO2">go test2</NButton>
+        <NButton @click="GO(1)">go test</NButton>
+        <NButton @click="GO(2)">go test1</NButton>
+        <NButton @click="GO(3)">go test2</NButton>
+        <NButton @click="GO(4)">go test3</NButton>
+        <NButton @click="GO(5)">go test4</NButton>
         <!-- <CourseTable :selectDate="selectDate" /> -->
       </div>
       <div id="right">
         <Countdown :targetDate="targetDate" />
         <HeiSi />
-        <!-- 8712d2458119ce30cfd119add078a814 -->
       </div>
     </NFlex>
   </div>
@@ -43,14 +44,18 @@ import HeiSi from '@/components/HeiSi.vue';
 const router = useRouter();
 const http = Http.getInstance();
 
-const GO = () => {
-  router.push('/test');
-};
-const GO1 = () => {
-  router.push('/test1');
-};
-const GO2 = () => {
-  router.push('/test2');
+const GO = (item) => {
+  if (item === 1) {
+    router.push('/test');
+  } else if (item === 2) {
+    router.push('/test1');
+  } else if (item === 3) {
+    router.push('/test2');
+  } else if (item === 4) {
+    router.push('/test3');
+  } else if (item === 5) {
+    router.push('/test4');
+  }
 };
 
 const init = async () => {

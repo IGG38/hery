@@ -20,6 +20,13 @@ export default defineConfig({
       dts: 'src/components.d.ts', // 生成类型声明文件
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
+  },
   build: {
     target: 'esnext', // 输出更现代的代码
     assetsDir: 'assets', // 设置静态资源输出目录
