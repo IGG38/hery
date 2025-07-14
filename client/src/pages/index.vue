@@ -60,14 +60,14 @@ const GO = (item) => {
 
 const init = async () => {
   // const resp = await http.get({
-  //    url: 'https://restapi.amap.com/v3/weather/weatherInfo',
-  //    data: {
-  //       key: '8712d2458119ce30cfd119add078a814',
-  //       city: '330100',
-  //       extensions: 'all',
-  //       output: 'JSON'
-  //    }
-  // })
+  //   url: 'https://restapi.amap.com/v3/weather/weatherInfo',
+  //   data: {
+  //     key: '00afb67c089dcb25d4f3424692cb3447',
+  //     city: '320921',
+  //     extensions: 'base',
+  //     output: 'JSON',
+  //   },
+  // });
   // console.log(resp);
 };
 
