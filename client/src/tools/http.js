@@ -38,12 +38,6 @@ export class Http {
     this.client.interceptors.request.use(
       (config) => {
         const url = config.url;
-        const session = Utils.getLocalStorage('session');
-        const sessionStorage = Utils.getSessionStorage('session');
-
-        if (session != 'null' && sessionStorage != 'null' && url !== '/api/login/h5login/phoneLogin') {
-          config.headers['token'] = `${sessionStorage ? sessionStorage : session}`;
-        }
         return config;
       },
       (error) => {

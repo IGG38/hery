@@ -3,23 +3,24 @@
     <div class="user-header">
       <img :src="safeAvatarUrl" class="user-avatar" />
       <div class="user-info">
-        <div class="user-name-line">
+        <NFlex class="user-name-line" vertical>
           <span class="user-name">{{ userInfo.nickname }}</span>
-        </div>
+          <span class="user-desc">{{ userInfo.desc }}</span>
+        </NFlex>
       </div>
     </div>
     <div class="user-stats">
       <div class="stat">
-        <div class="stat-number">{{ parsedFriendsCount }}</div>
+        <div class="stat-number">{{ userInfo.follows || 0 }}</div>
         <div class="stat-label">关注</div>
       </div>
       <div class="stat">
-        <div class="stat-number">{{ parsedFollowersCount }}</div>
+        <div class="stat-number">{{ userInfo.fans || 0 }}</div>
         <div class="stat-label">粉丝</div>
       </div>
       <div class="stat">
-        <div class="stat-number">{{ parsedLikesCount }}</div>
-        <div class="stat-label">点赞</div>
+        <div class="stat-number">{{ userInfo.interaction || 0 }}</div>
+        <div class="stat-label">获赞</div>
       </div>
     </div>
   </div>
@@ -27,6 +28,7 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue';
+import { NFlex } from 'naive-ui';
 
 const props = defineProps({
   userInfo: Object,
@@ -37,16 +39,6 @@ const safeAvatarUrl = computed(() => {
   const raw = props.userInfo?.avatar || '';
   return raw.replace(/^https:\/\/([^\/]*sinaimg\.cn)/, 'https://i0.wp.com/$1');
 });
-
-const parseCount = (str) => {
-  if (typeof str === 'number') return str;
-  if (!str) return 0;
-  return parseFloat(str.replace(/[^\d]/g, '')) || 0;
-};
-
-const parsedFollowersCount = computed(() => parseCount(props.userInfo?.followers_count));
-const parsedLikesCount = computed(() => parseCount(props.userInfo?.likes_count));
-const parsedFriendsCount = computed(() => parseCount(props.userInfo?.friends_count));
 </script>
 
 <style scoped>
@@ -80,10 +72,11 @@ const parsedFriendsCount = computed(() => parseCount(props.userInfo?.friends_cou
   font-size: 18px;
   font-weight: 600;
 }
-.user-description {
+.user-desc {
   font-size: 14px;
+  line-height: 16px;
+  height: 16px;
   color: #555;
-  margin-top: 4px;
 }
 .user-stats {
   display: flex;

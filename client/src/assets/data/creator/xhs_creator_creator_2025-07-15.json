@@ -1,0 +1,28 @@
+[
+  {
+    "user_id": "5d2dfb8c00000000100109e4",
+    "nickname": "孤独的根三号",
+    "gender": "男",
+    "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31df0gt76gu005n9dve6422f4qg9ta38?imageView2/2/w/360/format/webp",
+    "desc": "",
+    "ip_location": "",
+    "follows": "292",
+    "fans": "14",
+    "interaction": "9",
+    "tag_list": "{\"info\": \"23岁\"}",
+    "last_modify_ts": 1752560402383
+  },
+  {
+    "user_id": "601a2f050000000001003fff",
+    "nickname": "suzy",
+    "gender": "男",
+    "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo30ol4p48f2i5g5o0q5s2g8fvvo5ejf78?imageView2/2/w/360/format/webp",
+    "desc": "~",
+    "ip_location": "",
+    "follows": "7",
+    "fans": "2",
+    "interaction": "2",
+    "tag_list": "{\"info\": null}",
+    "last_modify_ts": 1752560405068
+  }
+]
